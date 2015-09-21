@@ -1,5 +1,5 @@
 name:          numerals
-version:       0.4
+version:       0.4.1
 cabal-version: >= 1.9.2
 build-type:    Simple
 stability:     experimental
@@ -97,15 +97,15 @@ library
   hs-source-dirs: src
   ghc-options: -Wall
 
-  build-depends: base                       >= 3.0.3.1 && < 4.7
+  build-depends: base                       >= 3.0.3.1 && < 5
                , base-unicode-symbols       >= 0.2.2   && < 0.3
                , containers                 >= 0.4     && < 0.6
                , containers-unicode-symbols >= 0.3     && < 0.4
                , fingertree                 >= 0.0.1   && < 0.2
-               , text                       >= 0.11    && < 1.2
+               , text                       >= 0.11    && < 1.3
 
   if impl(ghc >= 7.2.1)
-    build-depends: integer-gmp >= 0.3 && < 0.6
+    build-depends: integer-gmp >= 0.3 && < 1.1
 
   exposed-modules: Text.Numeral
                  , Text.Numeral.BigNum
@@ -281,18 +281,18 @@ test-suite test-numerals
                , Text.Numeral.Language.ZPL.TestData
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
 
-  build-depends: base                       >= 3.0.3.1 && < 4.7
+  build-depends: base                       >= 3.0.3.1 && < 5
                , base-unicode-symbols       >= 0.2.2   && < 0.3
-               , HUnit                      >= 1.2.2   && < 1.3
-               , QuickCheck                 >= 2.4.2   && < 2.7
-               , test-framework             >= 0.3.3   && < 0.9
-               , test-framework-hunit       >= 0.2.6   && < 0.4
-               , test-framework-quickcheck2 >= 0.2.12  && < 0.4
-               , text                       >= 0.11    && < 1.2
+               , HUnit                      >= 1.2.2  
+               , QuickCheck                 >= 2.4.2  
+               , test-framework             >= 0.3.3   
+               , test-framework-hunit       >= 0.2.6   
+               , test-framework-quickcheck2 >= 0.2.12  
+               , text                       >= 0.11    && < 1.4
                , numerals
 
   if impl(ghc >= 7.2.1)
-    build-depends: integer-gmp >= 0.3 && < 0.6
+    build-depends: integer-gmp >= 0.3 && < 1.1
 
 -------------------------------------------------------------------------------
 

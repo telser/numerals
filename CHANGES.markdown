@@ -1,6 +1,11 @@
 Changelog for numerals
 ======================
 
+0.4.1
+---
+
+- Relax dependency versions to build with current dependencies.
+
 
 0.4
 ---
